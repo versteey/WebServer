@@ -19,7 +19,7 @@ public class WebApi implements WebApplication {
         }
         else if (request.getResourcePath().equals("index.html") ||
                 request.getResourcePath().equals("") && request.getHeaderParameterValue("isbn").equals("")) {
-            createHTMLPage(response, readFile(new File("html/index.html")));
+            createHTMLPage(response, readFile(new File("./html/index.html")));
         }
         else {
             String isbn = request.getHeaderParameterValue("isbn");
@@ -36,7 +36,7 @@ public class WebApi implements WebApplication {
     }
     private void loadISBN(RequestMessage request, ResponseMessage response, String isbn) {
         try {
-            String result = readFile(new File("html/" + isbn + ".html"));
+            String result = readFile(new File("./html/" + isbn + ".html"));
             if(result == null) throw new Exception();
             result += createFooter(request, response, isbn);
             createHTMLPage(response, result);
@@ -92,7 +92,7 @@ public class WebApi implements WebApplication {
     }
 
     private void getStyleSheet(ResponseMessage response) {
-        String result = readFile(new File("style.css"));
+        String result = readFile(new File("./style.css"));
         response.setStatus(HTTPStatusCode.OK);
         response.setContent(result);
     }
