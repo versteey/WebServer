@@ -1,0 +1,101 @@
+body {
+    background-color: #bebebe;
+    font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;;
+}
+
+#header {
+    margin-left:14%;
+}
+#header img{
+    height: 15%;
+}
+
+#menu {
+    float: left;
+    background-color: #8C1717;
+}
+
+#menu ul {
+    list-style-type: none;
+}
+
+#menu ul li {
+    background-color: #8C1717;
+    color: white;
+    font-size: 30px;
+}
+
+#menu ul li:hover {
+    background-color: #660000;
+    color: white;
+    position: relative;
+
+}
+
+#menu ul li ul {
+    display: none;
+}
+
+#menu ul li:hover ul li{
+    background-color: #660000;
+}
+
+#menu ul li:hover ul {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 98px;
+    width: 120px;
+}
+
+#menu ul li:hover ul li:hover a  {
+    background-color: #440000;
+
+}
+
+
+#content {
+    float:left;
+    margin-left: 3%;
+    width: 80%;
+}
+
+#menu h1 {
+    color: #fff;
+    font-size: 60px;
+}
+
+#content h1 {
+    color: #000;
+    font-size: 60px;
+}
+
+#content p {
+    width: 60%;
+}
+
+#footer {
+    clear: both;
+}
+
+#footer ul {
+    float: right;
+    margin-right: 150px;
+    background-color: #8C1717;
+}
+
+#footer ul li{
+    padding: 15 15;
+    display: inline;
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: #660000;
+}
